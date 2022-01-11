@@ -38,3 +38,20 @@ console.log(typeof(objArrayTwo[0].name));
 var resulation = window.screen.width;
 console.log(resulation);
 alert(document.lastModified);
+
+//array object revisitied
+const arr = [1,3,5,4];
+function printArrya(){
+    for(var i=0;i<arr.length;i++){
+
+        console.log(arr[i]);
+    }
+}
+printArrya();
+arr.push(8);
+console.log(arr[4]);
+console.log(arr[arr.length-1]);
+printArrya(); 3
+
+
+

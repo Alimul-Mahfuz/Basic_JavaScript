@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter app</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: beige;
+        }
+
+
+        header h3{
+            text-align: center;
+            padding: 2%;
+            font-size: 32pt;
+        }
+
+        .counter h2{
+            text-align: center;
+            padding: 3%;
+            font-size: 48pt;
+            font-weight: bold;
+        }
+        .button-click{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-click button{
+            margin: 20px;
+            font-size: 25pt;
+            padding: 10px;
+            color: white;
+            border: none;
+            
+        }
+        .increment{
+            background-color: green;
+            box-shadow: 5px 10px 18px green;
+        }
+        .decrement{
+            background-color: red;
+            box-shadow: 5px 10px 5px rgb(231, 132, 132);
+        }
+
+        .increment:hover{
+            border: 5px solid red;
+            
+        }
+
+        .decrement:hover{
+            border:5px solid green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h3 class="title">Welcome to Counter app</h3>
+        </header>
+        <section class="counter">
+            <h2 id='counter'>0</h2>
+        </section>
+        <section class="button-click">
+            <button onclick="IcrementMe()" class="increment" type="submit">Increment</button>
+            <button onclick="DecrementMe()" class="decrement" type="submit">Decrement</button>
+        </section>
+    </div>
+    <script>
+        function IcrementMe(){
+            var cnt = parseInt(document.getElementById('counter').innerText);
+            cnt++;
+            document.getElementById('counter').innerText=cnt;
+
+        }
+        function DecrementMe(){
+            var cnt = parseInt(document.getElementById('counter').innerText);
+            if(cnt==0){
+                window.alert("Counter is zero position");
+            }
+            else{
+                cnt--;
+                document.getElementById('counter').innerText=cnt;
+            }
+        }
+    </script>
+</body>
+</html>
